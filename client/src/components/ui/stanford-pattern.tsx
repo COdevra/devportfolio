@@ -9,17 +9,42 @@ export function StanfordPattern({ className }: StanfordPatternProps) {
     <div className={cn("fixed inset-0 -z-10", className)}>
       <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <pattern id="stanford-tree" x="0" y="0" width="100" height="120" patternUnits="userSpaceOnUse">
-            {/* Stylized Stanford Tree */}
+          <pattern id="stanford-grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
             <path
-              d="M50 10 L60 30 L70 30 L55 45 L65 45 L45 65 L55 65 L35 85 L45 85 L30 100 L15 85 L25 85 L5 65 L15 65 L-5 45 L5 45 L-10 30 L0 30 L10 10 Z"
-              fill="currentColor"
+              d="M 40 0 L 0 0 0 40"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="0.5"
               className="text-primary"
-              opacity="0.15"
+              opacity="0.1"
             />
-            <line x1="30" y1="100" x2="30" y2="110" stroke="currentColor" strokeWidth="2" className="text-primary" opacity="0.15" />
+          </pattern>
+          <pattern id="stanford-tree" x="0" y="0" width="160" height="160" patternUnits="userSpaceOnUse">
+            {/* Stylized Stanford Tree - more detailed */}
+            <path
+              d="M80 20 
+                 L95 50 L105 50 L90 70 
+                 L100 70 L85 90 L95 90 
+                 L75 115 L85 115 L65 135 
+                 L75 135 L60 155 L45 135 
+                 L55 135 L35 115 L45 115 
+                 L25 90 L35 90 L20 70 
+                 L30 70 L15 50 L25 50 L40 20 Z"
+              fill="currentColor"
+              className="text-primary animate-pulse"
+              opacity="0.2"
+            />
+            <line 
+              x1="60" y1="155" 
+              x2="60" y2="160" 
+              stroke="currentColor" 
+              strokeWidth="3" 
+              className="text-primary" 
+              opacity="0.2" 
+            />
           </pattern>
         </defs>
+        <rect x="0" y="0" width="100%" height="100%" fill="url(#stanford-grid)" />
         <rect x="0" y="0" width="100%" height="100%" fill="url(#stanford-tree)" />
       </svg>
     </div>
