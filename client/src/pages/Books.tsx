@@ -1,5 +1,6 @@
 import { MotionDiv, fadeIn } from "@/components/ui/motion";
 import { Card, CardContent } from "@/components/ui/card";
+import { StanfordPattern } from "@/components/ui/stanford-pattern";
 
 // This will be replaced with data from the backend
 const books = [
@@ -7,6 +8,7 @@ const books = [
     title: "Zero to One",
     author: "Peter Thiel",
     review: "A thought-provoking book about building the future...",
+    image: "https://images.unsplash.com/photo-1508873535684-277a3cbcc4e8",
     rating: 5,
     date: "2024-03-15"
   },
@@ -16,6 +18,7 @@ const books = [
 export default function Books() {
   return (
     <div className="min-h-screen p-12">
+      <StanfordPattern />
       <MotionDiv
         variants={fadeIn}
         initial="initial"
@@ -23,11 +26,16 @@ export default function Books() {
         className="max-w-4xl space-y-8"
       >
         <h1 className="text-4xl font-bold mb-8">Book Reviews</h1>
-        <div className="space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {books.map((book, index) => (
             <MotionDiv key={index} variants={fadeIn}>
               <Card>
                 <CardContent className="p-6 space-y-4">
+                  <img
+                    src={book.image}
+                    alt={book.title}
+                    className="w-full h-48 object-cover rounded-md"
+                  />
                   <h2 className="text-2xl font-semibold">{book.title}</h2>
                   <p className="text-muted-foreground">by {book.author}</p>
                   <p className="text-foreground/80">{book.review}</p>

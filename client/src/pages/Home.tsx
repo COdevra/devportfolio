@@ -1,8 +1,10 @@
 import { MotionDiv, fadeIn } from "@/components/ui/motion";
+import { StanfordPattern } from "@/components/ui/stanford-pattern";
 
 export default function Home() {
   return (
     <div className="min-h-screen p-12">
+      <StanfordPattern className="opacity-10" />
       <MotionDiv
         variants={fadeIn}
         initial="initial"
