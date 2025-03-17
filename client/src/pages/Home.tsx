@@ -5,24 +5,25 @@ import { Separator } from "@/components/ui/separator";
 
 export default function Home() {
   return (
-    <div className="min-h-screen p-12">
+    <div className="relative min-h-screen p-12">
       <StanfordPattern />
+      <div className="absolute inset-0 bg-background/80" /> {/* Dark overlay */}
       <MotionDiv
         variants={fadeIn}
         initial="initial"
         animate="animate"
-        className="max-w-2xl space-y-12"
+        className="relative max-w-2xl space-y-12 z-10"
       >
         <div className="space-y-6">
-          <h1 className="text-4xl font-bold">Aaditya Nalawade</h1>
-          <Card className="border-primary/20 bg-background/50 backdrop-blur-sm">
+          <h1 className="text-4xl font-bold text-white">Aaditya Nalawade</h1>
+          <Card className="border-white/20 bg-background/40 backdrop-blur-sm">
             <CardContent className="p-6">
-              <div className="space-y-4 text-muted-foreground">
+              <div className="space-y-4 text-white/80">
                 <p className="text-lg">freshman @ stanford.</p>
-                <Separator className="bg-primary/20" />
+                <Separator className="bg-white/20" />
                 <p className="text-lg">
                   building consumer apps @{" "}
-                  <span className="text-primary hover:underline cursor-pointer">
+                  <span className="text-white hover:underline cursor-pointer">
                     glassroomstudio
                   </span>
                 </p>
@@ -31,14 +32,14 @@ export default function Home() {
           </Card>
         </div>
 
-        <Card className="border-primary/20 bg-background/50 backdrop-blur-sm hover:border-primary/40 transition-colors">
+        <Card className="border-white/20 bg-background/40 backdrop-blur-sm hover:border-white/40 transition-colors">
           <CardContent className="p-6">
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg text-white/80 leading-relaxed">
               I believe you cannot build great things without being surrounded by
               great people. This is one of the reasons I started writing on{" "}
               <a 
                 href="https://twitter.com" 
-                className="text-primary hover:underline"
+                className="text-white hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -48,8 +49,6 @@ export default function Home() {
             </p>
           </CardContent>
         </Card>
-
-        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-background to-transparent" />
       </MotionDiv>
     </div>
   );

@@ -13,10 +13,9 @@ export function StanfordPattern({ className }: StanfordPatternProps) {
             <path
               d="M 40 0 L 0 0 0 40"
               fill="none"
-              stroke="currentColor"
+              stroke="white"
               strokeWidth="0.5"
-              className="text-primary"
-              opacity="0.1"
+              opacity="0.2"
             />
           </pattern>
           <pattern id="stanford-tree" x="0" y="0" width="160" height="160" patternUnits="userSpaceOnUse">
@@ -30,17 +29,16 @@ export function StanfordPattern({ className }: StanfordPatternProps) {
                  L55 135 L35 115 L45 115 
                  L25 90 L35 90 L20 70 
                  L30 70 L15 50 L25 50 L40 20 Z"
-              fill="currentColor"
-              className="text-primary animate-pulse"
-              opacity="0.2"
+              fill="white"
+              opacity="0.15"
+              className="animate-pulse"
             />
             <line 
               x1="60" y1="155" 
               x2="60" y2="160" 
-              stroke="currentColor" 
-              strokeWidth="3" 
-              className="text-primary" 
-              opacity="0.2" 
+              stroke="white" 
+              strokeWidth="3"
+              opacity="0.15"
             />
           </pattern>
         </defs>
