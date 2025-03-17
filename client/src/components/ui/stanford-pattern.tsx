@@ -19,7 +19,7 @@ export function StanfordPattern({ className }: StanfordPatternProps) {
             />
           </pattern>
           <pattern id="stanford-tree" x="0" y="0" width="160" height="160" patternUnits="userSpaceOnUse">
-            {/* Stylized Stanford Tree - more detailed */}
+            {/* Stylized Stanford Tree */}
             <path
               d="M80 20 
                  L95 50 L105 50 L90 70 
@@ -29,19 +29,20 @@ export function StanfordPattern({ className }: StanfordPatternProps) {
                  L55 135 L35 115 L45 115 
                  L25 90 L35 90 L20 70 
                  L30 70 L15 50 L25 50 L40 20 Z"
-              fill="white"
-              opacity="0.15"
-              className="animate-pulse"
+              fill="#175E54" /* Stanford Green */
+              className="drop-shadow-lg"
+              opacity="0.9"
             />
             <line 
               x1="60" y1="155" 
               x2="60" y2="160" 
-              stroke="white" 
+              stroke="#175E54" 
               strokeWidth="3"
-              opacity="0.15"
+              opacity="0.9"
             />
           </pattern>
         </defs>
+        <rect x="0" y="0" width="100%" height="100%" fill="#8C1515" opacity="0.05" /> {/* Stanford Red background */}
         <rect x="0" y="0" width="100%" height="100%" fill="url(#stanford-grid)" />
         <rect x="0" y="0" width="100%" height="100%" fill="url(#stanford-tree)" />
       </svg>

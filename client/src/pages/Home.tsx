@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="relative min-h-screen p-12">
       <StanfordPattern />
-      <div className="absolute inset-0 bg-background/80" /> {/* Dark overlay */}
+      <div className="absolute inset-0 bg-background/90" /> {/* Subtle overlay */}
       <MotionDiv
         variants={fadeIn}
         initial="initial"
