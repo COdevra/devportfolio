@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="relative min-h-screen p-12">
       <StanfordPattern />
-      <div className="absolute inset-0 bg-background/90" /> {/* Subtle overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background/95 to-background/70" />
       <MotionDiv
         variants={fadeIn}
         initial="initial"
@@ -16,11 +16,11 @@ export default function Home() {
       >
         <div className="space-y-6">
           <h1 className="text-4xl font-bold text-white">Aaditya Nalawade</h1>
-          <Card className="border-white/20 bg-background/40 backdrop-blur-sm">
+          <Card className="border-white/10 bg-black/30 backdrop-blur">
             <CardContent className="p-6">
-              <div className="space-y-4 text-white/80">
+              <div className="space-y-4 text-white/90">
                 <p className="text-lg">freshman @ stanford.</p>
-                <Separator className="bg-white/20" />
+                <Separator className="bg-white/10" />
                 <p className="text-lg">
                   building consumer apps @{" "}
                   <span className="text-white hover:underline cursor-pointer">
@@ -32,9 +32,9 @@ export default function Home() {
           </Card>
         </div>
 
-        <Card className="border-white/20 bg-background/40 backdrop-blur-sm hover:border-white/40 transition-colors">
+        <Card className="border-white/10 bg-black/30 backdrop-blur hover:bg-black/40 transition-colors">
           <CardContent className="p-6">
-            <p className="text-lg text-white/80 leading-relaxed">
+            <p className="text-lg text-white/90 leading-relaxed">
               I believe you cannot build great things without being surrounded by
               great people. This is one of the reasons I started writing on{" "}
               <a 

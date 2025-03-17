@@ -9,41 +9,24 @@ export function StanfordPattern({ className }: StanfordPatternProps) {
     <div className={cn("fixed inset-0 -z-10", className)}>
       <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <pattern id="stanford-grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+          <pattern id="stanford-tree" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+            {/* Simple Stanford Tree Shape */}
             <path
-              d="M 40 0 L 0 0 0 40"
-              fill="none"
-              stroke="white"
-              strokeWidth="0.5"
-              opacity="0.2"
+              d="M100 20 
+                 L120 60 L140 60 L120 90 
+                 L140 90 L110 130 L130 130 
+                 L100 170 L70 130 L90 130 
+                 L60 90 L80 90 L60 60 L80 60 Z"
+              fill="#2E6C49"
+              opacity="0.3"
+              className="drop-shadow-md"
             />
           </pattern>
-          <pattern id="stanford-tree" x="0" y="0" width="160" height="160" patternUnits="userSpaceOnUse">
-            {/* Stylized Stanford Tree */}
-            <path
-              d="M80 20 
-                 L95 50 L105 50 L90 70 
-                 L100 70 L85 90 L95 90 
-                 L75 115 L85 115 L65 135 
-                 L75 135 L60 155 L45 135 
-                 L55 135 L35 115 L45 115 
-                 L25 90 L35 90 L20 70 
-                 L30 70 L15 50 L25 50 L40 20 Z"
-              fill="#175E54" /* Stanford Green */
-              className="drop-shadow-lg"
-              opacity="0.9"
-            />
-            <line 
-              x1="60" y1="155" 
-              x2="60" y2="160" 
-              stroke="#175E54" 
-              strokeWidth="3"
-              opacity="0.9"
-            />
+          <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+            <circle cx="2" cy="2" r="1" fill="white" opacity="0.1" />
           </pattern>
         </defs>
-        <rect x="0" y="0" width="100%" height="100%" fill="#8C1515" opacity="0.05" /> {/* Stanford Red background */}
-        <rect x="0" y="0" width="100%" height="100%" fill="url(#stanford-grid)" />
+        <rect x="0" y="0" width="100%" height="100%" fill="url(#dots)" />
         <rect x="0" y="0" width="100%" height="100%" fill="url(#stanford-tree)" />
       </svg>
     </div>
