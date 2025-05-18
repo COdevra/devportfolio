@@ -8,6 +8,7 @@ import Books from "@/pages/Books";
 import Essays from "@/pages/Essays";
 import Memories from "@/pages/Memories";
 import Admin from "@/pages/Admin";
+import Interests from "@/pages/Interests";
 import { Navbar } from "@/components/layout/Navbar";
 import { StanfordPattern } from "@/components/ui/stanford-pattern";
 
@@ -22,6 +23,7 @@ function Router() {
           <Route path="/books" component={Books} />
           <Route path="/essays" component={Essays} />
           <Route path="/memories" component={Memories} />
+          <Route path="/interests" component={Interests} />
           <Route path="/admin" component={Admin} />
           <Route component={NotFound} />
         </Switch>

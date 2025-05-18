@@ -5,7 +5,8 @@ const navItems = [
   { href: "/", label: "home" },
   { href: "/books", label: "books" },
   { href: "/essays", label: "essays" },
-  { href: "/memories", label: "memories" }
+  { href: "/memories", label: "memories" },
+  { href: "/interests", label: "interests" }
 ];
 
 export function Navbar() {

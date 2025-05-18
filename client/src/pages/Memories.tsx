@@ -1,6 +1,13 @@
 import { MotionDiv, fadeIn, staggerContainer } from "@/components/ui/motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { StanfordPattern } from "@/components/ui/stanford-pattern";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { useState } from "react";
 
 // This will be replaced with data from the backend
 const memories = [
@@ -14,6 +21,8 @@ const memories = [
 ];
 
 export default function Memories() {
+  const [selectedMemory, setSelectedMemory] = useState<typeof memories[0] | null>(null);
+
   return (
     <div className="min-h-screen p-12">
       <StanfordPattern />
@@ -27,11 +36,11 @@ export default function Memories() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {memories.map((memory, index) => (
             <MotionDiv key={index} variants={fadeIn}>
-              <Card className="overflow-hidden">
+              <Card className="overflow-hidden cursor-pointer" onClick={() => setSelectedMemory(memory)}>
                 <img
                   src={memory.image}
                   alt={memory.title}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-48 object-cover transition-transform hover:scale-105"
                 />
                 <CardContent className="p-6 space-y-4">
                   <h2 className="text-xl font-semibold">{memory.title}</h2>
@@ -43,6 +52,27 @@ export default function Memories() {
           ))}
         </div>
       </MotionDiv>
+
+      <Dialog open={!!selectedMemory} onOpenChange={() => setSelectedMemory(null)}>
+        {selectedMemory && (
+          <DialogContent className="max-w-3xl">
+            <DialogHeader>
+              <DialogTitle className="text-2xl font-bold">
+                {selectedMemory.title}
+              </DialogTitle>
+            </DialogHeader>
+            <div className="space-y-4">
+              <img
+                src={selectedMemory.image}
+                alt={selectedMemory.title}
+                className="w-full h-[400px] object-cover rounded-md"
+              />
+              <p className="text-sm text-muted-foreground">{selectedMemory.date}</p>
+              <p className="text-foreground/80">{selectedMemory.description}</p>
+            </div>
+          </DialogContent>
+        )}
+      </Dialog>
     </div>
   );
 }

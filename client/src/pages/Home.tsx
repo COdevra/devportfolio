@@ -15,16 +15,16 @@ export default function Home() {
         className="relative max-w-2xl space-y-12 z-10"
       >
         <div className="space-y-6">
-          <h1 className="text-4xl font-bold text-white">Aaditya Nalawade</h1>
+          <h1 className="text-4xl font-bold text-white">Devaki Rawal</h1>
           <Card className="border-white/10 bg-black/30 backdrop-blur">
             <CardContent className="p-6">
               <div className="space-y-4 text-white/90">
-                <p className="text-lg">freshman @ stanford.</p>
+                <p className="text-lg">Graduate @ St.Xavier's College.</p>
                 <Separator className="bg-white/10" />
                 <p className="text-lg">
-                  building consumer apps @{" "}
+                  Exploring @{" "}
                   <span className="text-white hover:underline cursor-pointer">
-                    glassroomstudio
+                    Life
                   </span>
                 </p>
               </div>
@@ -43,7 +43,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Twitter
+               Blogs
               </a>
               .
             </p>

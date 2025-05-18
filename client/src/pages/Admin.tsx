@@ -35,40 +35,22 @@ export default function Admin() {
     resolver: zodResolver(essaySchema)
   });
 
-  const onBookSubmit = async (data: BookFormData) => {
-    try {
-      // TODO: Add API integration
-      console.log(data);
-      toast({
-        title: "Success",
-        description: "Book review added successfully",
-      });
-      bookForm.reset();
-    } catch (error) {
-      toast({
-        variant: "destructive",
-        title: "Error",
-        description: "Failed to add book review",
-      });
-    }
+  const onBookSubmit = (data: BookFormData) => {
+    console.log(data);
+    toast({
+      title: "Success",
+      description: "Book review added successfully",
+    });
+    bookForm.reset();
   };
 
-  const onEssaySubmit = async (data: EssayFormData) => {
-    try {
-      // TODO: Add API integration
-      console.log(data);
-      toast({
-        title: "Success",
-        description: "Essay added successfully",
-      });
-      essayForm.reset();
-    } catch (error) {
-      toast({
-        variant: "destructive",
-        title: "Error",
-        description: "Failed to add essay",
-      });
-    }
+  const onEssaySubmit = (data: EssayFormData) => {
+    console.log(data);
+    toast({
+      title: "Success",
+      description: "Essay added successfully",
+    });
+    essayForm.reset();
   };
 
   return (
