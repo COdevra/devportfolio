@@ -22,7 +22,7 @@ const projects: Project[] = [
     title: "Krishmitra",
     imageUrl: "/assets/krishimitra.png",
     githubUrl: "https://github.com/COdevra/krishimitra",
-    deployedUrl: "https://krishmitra.co",
+    deployedUrl: "https://krishimitra.co",
     description: "A digital platform mission to provide personalized agricultural insights.",
     details:
       "Krishmitra is a digital platform focused on personalizing agricultural recommendations for farmers. The app is currently ongoing and aims to deliver tailored insights for planting, weather, and crop care."
@@ -35,7 +35,7 @@ const projects: Project[] = [
     deployedUrl: "https://naaso.com.np",
     description: "An e-commerce website to sell local products like roasted barley, apples, and honey.",
     details:
-      "Naaso is an e-commerce site built to sell local products such as roasted barley (satu), apples, and honey. It was created to showcase authentic Jumli(my hometown) items online."
+      "Naaso is an e-commerce site built to sell local products such as roasted barley (satu), apples, and honey. It was created to showcase authentic Jumli (my hometown) items online."
   },
   {
     id: 3,
@@ -102,7 +102,7 @@ export default function Projects() {
                     <DialogHeader>
                       <DialogTitle>{project.title}</DialogTitle>
                     </DialogHeader>
-                    <p className="text-sm leading-relaxed text-slate-700 dark:text-slate-200">
+                    <p className="text-sm leading-relaxed text-white/90">
                       {project.details}
                     </p>
                   </DialogContent>
