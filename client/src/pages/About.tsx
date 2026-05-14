@@ -3,7 +3,7 @@ import { StanfordPattern } from "@/components/ui/stanford-pattern";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
-export default function Home() {
+export default function About() {
   return (
     <div className="relative min-h-screen p-12">
       <StanfordPattern />
@@ -19,7 +19,7 @@ export default function Home() {
           <Card className="border-white/10 bg-black/30 backdrop-blur">
             <CardContent className="p-6">
               <div className="space-y-4 text-white/90">
-                <p className="text-lg">Graduate @ St.Xavier's College.</p>
+                <p className="text-lg">Richmond Scholar @ University of Richmond</p>
                 <Separator className="bg-white/10" />
                 <p className="text-lg">
                   Exploring @{" "}
@@ -35,17 +35,17 @@ export default function Home() {
         <Card className="border-white/10 bg-black/30 backdrop-blur hover:bg-black/40 transition-colors">
           <CardContent className="p-6">
             <p className="text-lg text-white/90 leading-relaxed">
-              I believe you cannot build great things without being surrounded by
-              great people. This is one of the reasons I started writing on{" "}
+              Building meaningful projects through curiosity, creativity, and continuous learning.
+              {/* {" "}
               <a 
-                href="https://twitter.com" 
+                href="/projects" 
                 className="text-white hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-               Blogs
+               Projects
               </a>
-              .
+              . */}
             </p>
           </CardContent>
         </Card>

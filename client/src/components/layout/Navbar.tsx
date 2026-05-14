@@ -2,11 +2,8 @@ import { Link } from "wouter";
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  { href: "/", label: "home" },
-  { href: "/books", label: "books" },
-  { href: "/essays", label: "essays" },
-  { href: "/memories", label: "memories" },
-  { href: "/interests", label: "interests" }
+  { href: "/", label: "about me" },
+  { href: "/projects", label: "projects" }
 ];
 
 export function Navbar() {
